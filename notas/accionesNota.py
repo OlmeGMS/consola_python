@@ -1,6 +1,4 @@
-#import notas.nota as modelo
-from ..notas import nota as modelo
-
+import notas.nota as modelo
 
 class Acciones:
     def crear(self, usuario):
@@ -9,9 +7,9 @@ class Acciones:
         descripcion = input("Digita el contenido de tu nota: ")
         
         nota        = modelo.Nota(usuario[0], titulo, descripcion)
-        guardar     = modelo.guardar()
+        guardar     = nota.guardar()
 
         if guardar[0] >= 1:
-            print(f"Perfecto has guardado la nota: {nota.titulo}")
+            print(f"\nPerfecto has guardado la nota: {nota.titulo}")
         else:
-            print(f"No se ha guardado la nota, lo sentimos {usuario[1]}")
+            print(f"\nNo se ha guardado la nota, lo sentimos {usuario[1]}")

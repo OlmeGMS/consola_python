@@ -1,11 +1,5 @@
-#import acciones
-#import notas.accionesNota
-
-#import usuario as userModel
-#import accionesNota as notas
-
-from ..usuarios import usuario as userModel
-from ..notas import acciones
+import usuarios.usuario as userModel
+import notas.accionesNota
 
 class Acciones:
     def registro(self):
@@ -50,11 +44,11 @@ class Acciones:
         - Salir (salir)
         """)
         accion = input("¿Que quieres hacer?: ")
-        hazEl  = acciones.Acciones()
+        hazEl  = notas.accionesNota.Acciones()
 
         if accion == "crear":
-            print("Vamos a crear")
-            hazEl.crear(usuario)
+            #print("Vamos a crear")
+            hazEl.crear(usuario )
             self.proximasAcciones(usuario)
         elif accion == "mostrar":
             print("Vamos a mostrar")  

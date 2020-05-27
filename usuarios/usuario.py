@@ -1,7 +1,6 @@
 import datetime
 import hashlib
-#import conexion
-from ..usuarios import conexion
+import usuarios.conexion as conexion
 
 connect     = conexion.conectar()
 database    = connect[0]

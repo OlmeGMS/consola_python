@@ -1,5 +1,4 @@
-#import usuarios.conexion as conexion
-from ..usuarios import conexion
+import usuarios.conexion as conexion
 
 connect     = conexion.conectar()
 database    = connect[0]
@@ -13,6 +12,7 @@ class Nota:
         self.descripcion    = descripcion
 
     def guardar(self):
+        print(self)
         sql     = "INSERT INTO notas VALUES(null, %s, %s, %s, NOW())"
         nota    = (self.usuario_id, self.titulo, self.descripcion)
 
